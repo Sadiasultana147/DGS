@@ -304,6 +304,41 @@ body, html {
   background-color: #28a745;
   color: #fff !important;
 }
+/* ছোট স্ক্রিনে (মোবাইল) ফোন এবং drawer button লোগোর ডান পাশে inline রাখব */
+@media (max-width: 576px) {
+  .sticky-top .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* ফোন + drawer wrapper flex, centered */
+  .phone-drawer-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* ফোন নম্বর ছোট ফন্টে এবং padding কমিয়ে দিন */
+  .phone-box {
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    white-space: nowrap;  /* ফোন নম্বর ব্রেক না হয় */
+  }
+
+  /* ড্রয়ার বাটন ছোট করে */
+  .drawer-toggle-btn {
+    transform: scale(1) !important; /* scale কমিয়ে 1 করে নিন */
+    padding: 6px;
+  }
+
+  /* ড্রয়ার বাটনের ভিতরের স্প্যান বারে ছোট সাইজ দিন */
+  .drawer-toggle-btn span:nth-child(1) { width: 18px; height: 3px; }
+  .drawer-toggle-btn span:nth-child(2) { width: 14px; height: 3px; }
+  .drawer-toggle-btn span:nth-child(3) { width: 10px; height: 3px; }
+}
+
 
 /* ======================================
    End: Navbar Styles
