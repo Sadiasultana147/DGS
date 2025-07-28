@@ -338,6 +338,45 @@ body, html {
   .drawer-toggle-btn span:nth-child(2) { width: 14px; height: 3px; }
   .drawer-toggle-btn span:nth-child(3) { width: 10px; height: 3px; }
 }
+@media (max-width: 480px) {
+  .phone-box {
+    font-size: 13px;
+    padding: 3px 6px;
+  }
+
+  .drawer-toggle-btn {
+    transform: scale(0.9);
+  }
+
+  .drawer-toggle-btn span:nth-child(1) { width: 16px; height: 2.5px; }
+  .drawer-toggle-btn span:nth-child(2) { width: 12px; height: 2.5px; }
+  .drawer-toggle-btn span:nth-child(3) { width: 8px; height: 2.5px; }
+}
+@media (max-width: 400px) {
+  .phone-box {
+    font-size: 12px;
+    padding: 2px 5px;
+  }
+
+  .drawer-toggle-btn {
+    transform: scale(0.85);
+  }
+
+  .drawer-toggle-btn span:nth-child(1) { width: 14px; height: 2px; }
+  .drawer-toggle-btn span:nth-child(2) { width: 10px; height: 2px; }
+  .drawer-toggle-btn span:nth-child(3) { width: 6px; height: 2px; }
+}
+@media (max-width: 360px) {
+  .phone-box {
+    font-size: 11px;
+    padding: 1px 4px;
+  }
+
+  .drawer-toggle-btn {
+    transform: scale(0.8);
+  }
+}
+
 
 
 /* ======================================
