@@ -1,0 +1,439 @@
+<html lang="en">
+<head>
+  <!-- Meta and Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desh Guard Services (Pvt.) Ltd.</title>
+  <link rel="icon" type="image/png" href="./images/logo.png" />
+  <!-- ==================== CSS LINKS ==================== -->
+	<!-- AOS Animation Library -->
+  <link href="aos/dist/aos.css" rel="stylesheet" />
+  <!-- Bootstrap -->
+  <link href="./bootstrap/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link href="./fontawesome/css/all.min.css" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link href="./css/style.css?v=1.0.8" rel="stylesheet" />
+</head>
+<a href="#" onclick="history.back(); return false;" class="go-back-btn">
+  <i class="fas fa-arrow-left me-1"></i> Go Back
+</a>
+<body>
+ <!-- ==================== HEADER ==================== -->
+  <header class="sticky-top">
+    <nav class="bg-black text-white py-2 sticky-top" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
+      <div class="container d-flex align-items-center justify-content-between">
+      
+      <!-- Logo -->
+      <a href="https://deshguard.com/" class="d-flex align-items-center text-decoration-none" data-aos="fade-right" data-aos-delay="100">
+        <img src="./images/logo.png" alt="Desh Guard Logo" height="75" />
+      </a>
+
+      <!-- Main Menu (Desktop Only) -->
+      <ul class="menu-center list-unstyled d-flex gap-4 mb-0 align-items-center d-none d-lg-flex" data-aos="fade-down" data-aos-delay="150">
+        <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+
+        <!-- WHO WE ARE Dropdown -->
+        <li class="position-relative custom-dropdown">
+          <a href="#" class="text-white text-decoration-none custom-toggle">WHO WE ARE <i class="fas fa-chevron-down small ms-1"></i></a>
+          <ul class="custom-dropdown-menu">
+            <li><a href="about.html">About</a></li>
+            <li><a href="vision.html">Our Mission & Vision</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="history.html">Our History</a></li>
+          </ul>
+        </li>
+
+        <!-- WHAT WE DO Dropdown -->
+        <li class="position-relative custom-dropdown">
+          <a href="#" class="text-white text-decoration-none custom-toggle">WHAT WE DO <i class="fas fa-chevron-down small ms-1"></i></a>
+          <ul class="custom-dropdown-menu">
+            <li><a href="services.html">Security Services</a></li>
+            <li><a href="responsibilities.html">Responsibilities</a></li>
+            <li><a href="training.html">Training Programs</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </li>
+
+        <li><a href="clients.html" class="text-white text-decoration-none">OUR CLIENTS</a></li>
+        <li><a href="whyChoose.html" class="text-white text-decoration-none">WHY CHOOSE</a></li>
+      </ul>
+
+      <!-- Contact & Toggle -->
+      <div class="d-flex align-items-center gap-2" data-aos="fade-left" data-aos-delay="200">
+
+        <!-- Phone -->
+        <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold phone-box text-white">
+          <i class="fas fa-mobile-alt me-2"></i><em>+8801810-688246</em>
+        </div>
+
+        <!-- Contact Button (Desktop Only) -->
+        <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn d-none d-lg-flex" style="background-color: #28a745; color: #fff; border-color: #28a745;">
+          <a href="contact.html" class="fw-bold text-white text-decoration-none" style="font-size: 1.2rem; font-style: italic;">
+            Get in Touch With Us
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="drawer-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== Mobile Offcanvas Menu ========== -->
+  <aside>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+      <div class="offcanvas-header justify-content-between align-items-center">
+        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+          <img src="./images/logo.png" alt="Desh Guard Logo" height="50" />
+        </a>
+        <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div class="offcanvas-body" style="font-size: 14px;">
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
+          <li><a href="about.html" class="text-white text-decoration-none">ABOUT</a></li>
+          <li><a href="vision.html" class="text-white text-decoration-none">OUR MISSION & VISSION</a></li>
+          <li><a href="team.html" class="text-white text-decoration-none">OUR TEAM</a></li>
+          <li><a href="history.html" class="text-white text-decoration-none">OUR HISTORY</a></li>
+          <li><a href="services.html" class="text-white text-decoration-none">SECURITY SERVICES</a></li>
+          <li><a href="responsibilities.html" class="text-white text-decoration-none">RESPONSIBILITIES</a></li>
+          <li><a href="training.html" class="text-white text-decoration-none">TRAINING PROGRAMMS</a></li>
+          <li><a href="faq.html" class="text-white text-decoration-none">FAQ</a></li>
+          <li><a href="clients.html" class="text-white text-decoration-none">OUR CLIENTS</a></li>
+          <li><a href="whyChoose.html" class="text-white text-decoration-none">WHY CHOOSE</a></li>
+          <li>
+            <a href="contact.html" class="btn btn-success w-100 mt-3 text-center fw-bold" style="font-size: 1.1rem; font-style: italic;">
+              Get in Touch With Us
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</header>
+</div>
+<main>
+<section
+  class="text-white py-5 position-relative overflow-hidden"
+  style="
+    background: linear-gradient(135deg, #1f2937 0%, #2d3e50 50%, #3f4c77 100%);
+    padding-top: 80px;
+    min-height: 70vh;
+">
+<!-- Services Section -->
+
+  <div class="container">
+    <div class="text-center mb-4"> 
+      <h1 class="fw-bold text-white">OUR SERVICES</h1>
+      <p class="text-white">Comprehensive Security Solutions Across Bangladesh</p>
+    </div>
+
+    <!-- Moved "Professional & Trusted Since 2013" here, above the first image row -->
+    <div class="mb-4"> 
+      <h4 class="text-info fw-bold mb-3">Professional & Trusted Since 2013</h4>
+      <p style="text-align: justify;">
+        <strong>DESH GUARD SERVICES PVT. LTD.</strong> has been providing reliable and professional security services to over 50 organizations since 2013. With more than 150 trained personnel, we serve embassies, NGOs, banks, factories, commercial and residential properties.
+      </p>
+      <p style="text-align: justify;">
+        Our company is proud to be led by ex-defense professionals from ARMY, BDR, and ANSAR. We operate nationwide, with zonal offices in Chittagong and Sylhet, and a 24/7 Operational Control Room that ensures prompt response and continuous support.
+      </p>
+    </div>
+
+    <!-- Row 1: Image Left, Intro Text Right -->
+    <div class="row gx-4 gy-4 align-items-center mb-4"> 
+      <div class="col-md-6">
+	  <div class="curved-wrapper">
+				  <img src="./images/services-1 (2).jpg" class="all-imagecurvepath" alt="About Desh Guard" />
+				  
+				  <!-- Glassy black overlay -->
+				  <div class="glass-black-overlay"></div>
+
+				  <svg class="curve-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
+				  <defs>
+					<linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+					  <stop offset="11.4%" stop-color="#202639">
+						<animate attributeName="offset" values="0%;1;0%" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					  <stop offset="70.2%" stop-color="#3F4C77">
+						<animate attributeName="offset" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					  <stop offset="100%" stop-color="#6bc5ff">
+						<animate attributeName="offset" values="1;0;1" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					</linearGradient>
+				  </defs>
+				  <path d="
+					M 5,0
+					Q 50,10 95,0
+					L 100,5
+					Q 90,50 100,95
+					L 95,100
+					Q 50,90 5,100
+					L 0,95
+					Q 10,50 0,5
+					Z
+				  " fill="none" stroke="url(#animatedGradient)" stroke-width="4" vector-effect="non-scaling-stroke" />
+				</svg>
+				</div>
+      </div>
+      <div class="col-md-6">
+  <h4 class="text-info fw-bold mb-3">Your Safety, Our Priority</h4>
+  <p style="text-align: justify;">
+    At Desh Guard Services (Pvt.) Ltd., we believe that true security is achieved through a combination of unwavering vigilance, advanced strategy, and human excellence. Our elite security personnel are meticulously trained, background-verified, and equipped with the latest tools and protocols to meet evolving threats and client expectations. 
+    <br><br>
+    Whether it’s corporate facilities, residential complexes, or special events, we deliver customized, proactive security solutions with precision and care. With us, safety is not just a service — it is a commitment to excellence, reliability, and peace of mind.
+  </p>
+</div>
+
+    </div>
+
+    <!-- Row 2: Image Right, Detailed Service List Left -->
+<div class="row gx-4 gy-4 align-items-center mb-4"> 
+  <div class="col-md-6 order-md-2">
+  <div class="curved-wrapper">
+				  <img src="./images/services-2.jpg" class="all-imagecurvepath" alt="About Desh Guard" />
+				  
+				  <!-- Glassy black overlay -->
+				  <div class="glass-black-overlay"></div>
+
+				  <svg class="curve-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
+				  <defs>
+					<linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+					  <stop offset="11.4%" stop-color="#202639">
+						<animate attributeName="offset" values="0%;1;0%" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					  <stop offset="70.2%" stop-color="#3F4C77">
+						<animate attributeName="offset" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					  <stop offset="100%" stop-color="#6bc5ff">
+						<animate attributeName="offset" values="1;0;1" dur="4s" repeatCount="indefinite" />
+					  </stop>
+					</linearGradient>
+				  </defs>
+				  <path d="
+					M 5,0
+					Q 50,10 95,0
+					L 100,5
+					Q 90,50 100,95
+					L 95,100
+					Q 50,90 5,100
+					L 0,95
+					Q 10,50 0,5
+					Z
+				  " fill="none" stroke="url(#animatedGradient)" stroke-width="4" vector-effect="non-scaling-stroke" />
+				</svg>
+				</div>
+  </div>
+  <div class="col-md-6 order-md-1">
+    <h4 class="text-info fw-bold mb-3">Our Security Solutions</h4>
+    <ul class="list-unstyled">
+      <li class="mb-3"><strong>Security Guard In Charge:</strong> Senior-most personnel at each post, ensuring discipline and shift coordination.</li>
+      <li class="mb-3"><strong>Security Supervisor:</strong> Conducts surprise visits and inspections to maintain service quality.</li>
+      <li class="mb-3"><strong>Security Commander:</strong> Manages multi-site deployments and acts as client liaison.</li>
+      <li class="mb-3"><strong>Security Guards (Male/Female):</strong> Uniformed, trained, and verified personnel for entrances, factories, homes, and events.</li>
+      <li class="mb-3"><strong>Building Manager:</strong> Oversees all facility operations, reporting, and staff discipline.</li>
+      <li class="mb-3"><strong>Building Care Tracker:</strong> Ensures the upkeep and hygiene of property infrastructure.</li>
+      <li class="mb-3"><strong>Cleaners (Male/Female):</strong> Professionally trained in industrial and residential cleaning protocols.</li>
+    </ul>
+  </div>
+</div>
+<!-- Services Image Gallery -->
+<div class="row">
+    <div class="col-lg-10 mx-auto text-center">
+      <p style="font-size: 1.1rem; color: #f1f1f1;">
+        At <strong>Desh Guard Services (Pvt.) Ltd.</strong>, we take pride in offering a comprehensive range of professional security solutions tailored to meet the unique needs of our clients. Our team consists of highly trained personnel with backgrounds in defense, paramilitary, and civilian sectors.
+      </p>
+       <p style="font-size: 1.15rem; color: #ffd700; font-weight: 600;">
+        <strong>The gallery below showcases</strong> some of our core services in action — each image reflects our commitment to excellence, discipline, and client safety.
+      </p>
+    </div>
+  </div>
+    <div class="row g-4 mt-4">
+      <!-- Row 1 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-1.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 1" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-2.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 2" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-3.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 3" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-4.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 4" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-5.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 5" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-6.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 6" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+<!-- Row 3 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-7.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 4" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-8.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 5" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-9.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 6" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+	  <!-- Row 4 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-10.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 4" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-11.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 5" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-12.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 6" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+	  <!-- Row 5 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-13.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 4" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="position-relative overflow-hidden rounded-4 shadow">
+          <img src="./images/services-14.jpg" class="img-fluid w-100 object-fit-cover" style="aspect-ratio: 4/3;" alt="Training 5" />
+          <div class="glassy-caption"></div>
+        </div>
+      </div>
+      <!-- CTA -->
+    <div class="text-center">
+      <a href="contact.html" class="btn btn-info px-4">Contact Us Today</a>
+    </div>
+  </div>
+</section>
+</main>
+
+ <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-modern text-white pt-5 w-100">
+    <div class="container-fluid">
+      <div class="row gy-4">
+        <!-- Footer Column: About -->
+        <div class="col-md-4" data-aos="fade-right" data-aos-delay="150">
+          <h5 class="mb-4 border-bottom border-2 border-success pb-2 fw-bold">About Desh Guard Services</h5>
+          <p class="mb-3 text-secondary fw-bold">Desh Guard Services is one of the leading security service providers, delivering excellence with integrity and professionalism.</p>
+          <!-- Social Links -->
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="https://facebook.com/deshgaurdservicepvtltd" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/8801611490705" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Footer Column: Quick Links -->
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="250">
+          <h5 class="mb-4 border-bottom border-2 border-success pb-2 fw-bold">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link"><i class="fas fa-angle-right me-2"></i>Home</a></li>
+            <li><a href="about.html" class="footer-link"><i class="fas fa-angle-right me-2"></i>About</a></li>
+            <li><a href="services.html" class="footer-link"><i class="fas fa-angle-right me-2"></i>Services</a></li>
+            <li><a href="contact.html" class="footer-link"><i class="fas fa-angle-right me-2"></i>Contact</a></li>
+          </ul>
+        </div>
+        <!-- Footer Column: Contact Info -->
+        <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
+          <h5 class="mb-4 border-bottom border-2 border-success pb-2 fw-bold">Contact Us</h5>
+          <p class="mb-3 text-light"><i class="fas fa-map-marker-alt me-2 customeTextColor"></i>Ka-32/5/A, Polash Tower, Progoti Sarani, Gulshan, Dhaka-1212</p>
+          <p class="mb-3 text-light"><i class="fas fa-envelope me-2 customeTextColor"></i>deshguard.service13@gmail.com</p>
+          <div class="row g-2 mt-4">
+            <div class="col-6">
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>Hotline</strong><br><span class="ms-4">+8801810-688251</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688251</span></p>
+            </div>
+            <div class="col-6">
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>TNT</strong><br><span class="ms-4">02-55048492</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801911-767220</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer Bottom Bar -->
+    <div class="bg-dark text-center py-3 mt-5 d-flex justify-content-center align-items-center gap-2" data-aos="fade-up" data-aos-delay="350">
+      <a class="nav-link" href="https://deshguard.com/"><img src="./images/logo.png" alt="DGS" height="40" /></a>
+      <span class="text-muted fs-6"><strong class="text-white">&copy; 2025 Desh Guard Services All rights reserved.</strong></span>
+    </div>
+  </footer>
+  <!-- Bootstrap JS Bundle -->
+  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS Bundle -->
+  <script src="./aos/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+
+  <!-- Custom JS for active menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
+      const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+
+      drawerLinks.forEach(link => {
+        // Extract pathname from link.href
+        const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+
+        if (linkPath === currentPath) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+
+        // Optional: add click handler for immediate active class toggle before page reload
+        link.addEventListener('click', () => {
+          drawerLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

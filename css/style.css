@@ -1,0 +1,796 @@
+/* ======================================
+   Start: Navbar Styles
+====================================== */
+
+/* Global Styles */
+ @font-face {
+    font-family: 'Source Sans 3';
+    src: url('./fonts/SourceSans3-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('./fonts/SourceSans3-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('./fonts/SourceSans3-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Source Sans 3';
+    src: url('./fonts/SourceSans3-Black.ttf') format('truetype');
+    font-weight: 900;
+  }
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* ======================================
+   Start: Navbar Styles
+====================================== */
+
+/* Transparent Navbar (initial state) */
+.navbar-transparent {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Solid Navbar on scroll */
+.navbar-solid {
+  background-color: #000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sticky-top {
+  transition: box-shadow 0.3s ease;
+}
+
+.sticky-top.stuck {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-navbar {
+  background: rgba(18, 18, 18, 0.75); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px gray;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  transition: all 0.3s ease;
+}
+
+/* Main Menu & Dropdown Styling */
+
+.menu-center > li > a {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  padding: 8px 16px !important;
+  color: #fff !important;
+  background-color: transparent;
+}
+
+.menu-center > li > a,
+.custom-toggle {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 14px;
+  color: #00cc66;
+  white-space: nowrap;
+  background-color: transparent;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: color 0.4s ease, border-color 0.3s ease;
+}
+
+
+.menu-center > li > a::after,
+.custom-toggle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 0;
+  height: 2px;
+  background-color: #28a745;
+  transition: width 0.3s ease;
+}
+
+.menu-center > li:hover > a,
+.custom-dropdown:hover > a.custom-toggle {
+  color: #28a745 !important;
+}
+
+.menu-center > li:hover > a::after,
+.custom-dropdown:hover > a.custom-toggle::after {
+  width: 80%;
+}
+
+.custom-dropdown:hover > a.custom-toggle i {
+  color: #28a745 !important;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 220px;
+  padding: 8px 0;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 6px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.custom-dropdown:hover .custom-dropdown-menu,
+.custom-dropdown-menu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-dropdown-menu li {
+  list-style: none;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.custom-dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.custom-dropdown-menu a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  padding: 10px 18px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.custom-dropdown-menu a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Right Side Buttons (Phone & Contact) */
+.phone-box,
+.contact-btn {
+  font-size: 20px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 6px 15px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.contact-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+/* Drawer Menu (Offcanvas) */
+.drawer-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: transform 0.3s ease;
+}
+
+.drawer-toggle-btn span {
+  display: block;
+  border-radius: 4px;
+  height: 4px;
+  background-color: #28a745;
+  transition: all 0.3s ease;
+}
+
+.drawer-toggle-btn span:nth-child(1) { width: 25px; }
+.drawer-toggle-btn span:nth-child(2) { width: 18px; }
+.drawer-toggle-btn span:nth-child(3) { width: 12px; }
+
+.drawer-toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+.drawer-toggle-btn:hover span {
+  background-color: #00cc66;
+}
+
+.custom-close-btn {
+  filter: brightness(1.2) saturate(2);
+  width: 2rem;
+  height: 2rem;
+  background-color: #28a745;
+  border-radius: 50%;
+  padding: 0.5rem;
+  opacity: 1;
+  border: none;
+}
+
+.custom-close-btn:hover {
+  background-color: #1e7e34;
+}
+
+.offcanvas-body ul li a {
+  display: block;
+  padding: 10px 18px;
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.offcanvas-body ul li a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.offcanvas-body ul li a.active,
+.offcanvas-body ul li a.active:hover {
+  background-color: #28a745;
+  color: #fff !important;
+}
+
+.offcanvas-body ul li a.active::before {
+  content: "\f104";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #fff;
+}
+
+.offcanvas-body ul li.active > a {
+  background-color: #28a745;
+  color: #fff !important;
+}
+
+/* ======================================
+   End: Navbar Styles
+====================================== */
+
+
+/* ======================================
+   Start: Footer Styles
+====================================== */
+.footer-modern {
+  background: black;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 -4px 20px rgba(0, 204, 102, 0.1);
+}
+
+.footer-title {
+  font-size: 1.1rem;
+  color: #00cc66;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-link:hover {
+  color: #fff;
+  padding-left: 6px;
+}
+
+.footer-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #28a745;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  background-color: #00cc66;
+  transform: scale(1.15);
+}
+
+/* Social Icons */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+.social-icon:hover {
+  background: linear-gradient(45deg, #f39c12, #d35400);
+  color: #fff;
+  transform: rotate(360deg) scale(1.2);
+}
+/* ======================================
+   End: Footer Styles
+====================================== */
+
+
+/* ======================================
+   Start: Go Back Button Styles
+====================================== */
+.go-back-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 20px;
+  z-index: 1050;
+  padding: 12px 22px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #00ffc8;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+  box-shadow: inset 0 0 8px rgba(0, 255, 200, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow:
+    0 0 3px rgba(0, 255, 200, 0.6),
+    0 0 5px rgba(0, 255, 200, 0.4);
+}
+
+.go-back-btn:hover,
+.go-back-btn:focus {
+  color: #ffffff;
+  background: rgba(0, 255, 200, 0.7);
+  box-shadow:
+    0 0 8px rgba(0, 255, 200, 0.7),
+    inset 0 0 12px rgba(0, 255, 200, 0.3);
+  outline: none;
+  transform: scale(1.05);
+}
+/* ======================================
+   End: Go Back Button Styles
+====================================== */
+
+
+/* ======================================
+   Start: Hero Section Styles
+====================================== */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.hero-slide-container {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+}
+
+.hero-slide {
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 0; left: 0;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-text {
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/* ======================================
+   End: Hero Section Styles
+====================================== */
+
+
+/* ======================================
+   7. Start: (About, Content) Section Styles
+====================================== */
+.content-section,
+#about {
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 100px 0;
+}
+
+.section-title {
+  border-left: 5px solid #28a745;
+  padding-left: 10px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* ======================================
+   7. End: (About, Content) Section Styles
+====================================== */
+
+/* ======================================
+   Start: Client Page Styles
+====================================== */
+.client-card {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex;
+  width: 100%;
+}
+
+.client-card h5 {
+  color: #00d1b2; 
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.25rem;
+}
+
+
+.client-card p {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.0rem;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+/* ======================================
+   End: Client Page Styles
+====================================== */
+
+/* ======================================
+   Start: Vision-mission Section Styles
+====================================== */
+
+.mission-card {
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.core-values-card {
+  background: rgba(18, 18, 18, 0.65);
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+/* ======================================
+   End: Vision-mission Section Styles
+====================================== */
+
+/* ======================================
+   Start: svg Image path Section Styles
+====================================== */
+.curved-wrapper {
+  position: relative;
+  width: 100%; /* handled via Bootstrap now */
+  aspect-ratio: 6 / 5; /* maintains original 600x500 ratio */
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.2));
+}
+
+
+/* Add this: glowing gradient overlay on the left */
+.curved-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 25%;
+  pointer-events: none;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.35) 0%, transparent 100%);
+  filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.6));
+  mix-blend-mode: screen; /* brighten effect */
+  z-index: 2;
+}
+
+/* image styles */
+.all-imagecurvepath {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+}
+
+.curve-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ======================================
+   Start: svg Image path Section Styles
+====================================== */
+
+.training-section-glassy {
+  background: linear-gradient(135deg, #0a0f1a 0%, #1c1e2e 100%);
+  padding: 4rem 0;
+}
+
+.glassy-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.glassy-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glassy-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 100, 0.1);
+}
+
+.glassy-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(16, 16, 16, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.org-chart-section {
+  position: relative;
+  padding: 60px 0;
+  background: linear-gradient(135deg, rgba(45, 55, 80, 0.85), rgba(70, 90, 120, 0.88));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 0 40px rgba(255, 255, 255, 0.02);
+  color: #fff;
+  overflow: hidden;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  text-align: center;
+  gap: 10px;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.org-sublevel {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.org-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 12px 18px;
+  border-radius: 14px;
+  min-width: 170px;
+  margin: 5px;
+  font-weight: 600;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s;
+}
+
+.org-box:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.org-box i {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
+  color: #00ffc3;
+}
+
+.arrow {
+  text-align: center;
+  font-size: 40px;
+  margin: 2px 0;
+  animation: bounceDown 1.5s infinite;
+  color: #28a745;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+ .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .faq-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #28a745; /* green highlight */
+      margin-bottom: 1.5rem;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+    .faq-subtitle {
+      text-align: center;
+      color: #ccc;
+      margin-bottom: 3rem;
+      font-size: 1.15rem;
+      font-weight: 400;
+      user-select: none;
+    }
+
+    /* Each FAQ item */
+    .faq-item {
+      background: #222;
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    .faq-item:hover {
+      border-color: #28a745;
+      box-shadow: 0 8px 20px rgba(40, 167, 69, 0.7);
+    }
+    .faq-question {
+      cursor: pointer;
+      padding: 1.3rem 1.5rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ddd;
+      user-select: none;
+      transition: color 0.3s ease;
+    }
+    .faq-question:hover {
+      color: #28a745;
+    }
+    .faq-question .icon {
+      font-size: 1.3rem;
+      transition: transform 0.3s ease;
+      color: #28a745;
+    }
+    .faq-item.active .faq-question .icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      color: #bbb;
+      font-size: 1rem;
+      line-height: 1.6;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.active .faq-answer {
+      padding: 1rem 1.5rem 1.8rem;
+      max-height: 1000px; /* large max-height for smooth expand */
+    }
+	.glassy-faq {
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.85), rgba(40, 167, 69, 0.1));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  padding: 4rem 2rem;
+  margin: 3rem auto;
+  width: 90%;
+  max-width: 950px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.glassy-faq:hover {
+  box-shadow: 0 16px 50px rgba(40, 167, 69, 0.5);
+}
+.glassy-main {
+  background: linear-gradient(145deg, rgba(18, 18, 18, 0.8), rgba(30, 30, 30, 0.7));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
