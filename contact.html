@@ -22,20 +22,18 @@
 
 <body>
    <!-- ==================== HEADER ==================== -->
-<header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black">
     <div class="container d-flex align-items-center justify-content-between">
       
-      <!-- Logo -->
+      <!-- Logo (Always Visible) -->
       <a href="https://deshguard.com/" class="d-flex align-items-center text-decoration-none" data-aos="fade-right" data-aos-delay="100">
-        <img src="./images/logo.png" alt="Desh Guard Logo" height="75" />
+        <img src="./images/logo.png" alt="Desh Guard Logo" height="60" />
       </a>
 
-      <!-- Main Menu (Desktop Only) -->
+      <!-- Desktop Menu -->
       <ul class="menu-center list-unstyled d-flex gap-4 mb-0 align-items-center d-none d-lg-flex" data-aos="fade-down" data-aos-delay="150">
         <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
-
-        <!-- WHO WE ARE Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHO WE ARE <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -45,8 +43,6 @@
             <li><a href="history.html">Our History</a></li>
           </ul>
         </li>
-
-        <!-- WHAT WE DO Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHAT WE DO <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -56,46 +52,41 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </li>
-
         <li><a href="clients.html" class="text-white text-decoration-none">OUR CLIENTS</a></li>
         <li><a href="whyChoose.html" class="text-white text-decoration-none">WHY CHOOSE</a></li>
       </ul>
 
-      <!-- Contact & Toggle -->
+      <!-- Right Area: Phone + Contact + Toggle -->
       <div class="d-flex align-items-center gap-2" data-aos="fade-left" data-aos-delay="200">
-
-        <!-- Phone -->
+        <!-- Phone (Always Visible) -->
         <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold phone-box text-white">
           <i class="fas fa-mobile-alt me-2"></i><em>+8801810-688246</em>
         </div>
 
-        <!-- Contact Button (Desktop Only) -->
-        <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn d-none d-lg-flex" style="background-color: #28a745; color: #fff; border-color: #28a745;">
+        <!-- Contact Button (Only Desktop) -->
+        <div class="d-none d-lg-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn" style="background-color: #28a745; color: #fff; border-color: #28a745;">
           <a href="contact.html" class="fw-bold text-white text-decoration-none" style="font-size: 1.2rem; font-style: italic;">
             Get in Touch With Us
           </a>
         </div>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="drawer-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+        <!-- Drawer Toggle (Only Mobile) -->
+        <button class="navbar-toggler border-0 shadow-none d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileDrawer" aria-controls="mobileDrawer">
+  <span class="custom-toggler-icon"><span></span></span>
+</button>
+
       </div>
     </div>
   </nav>
+</header>
 
-  <!-- ========== Mobile Offcanvas Menu ========== -->
-  <aside>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header justify-content-between align-items-center">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-          <img src="./images/logo.png" alt="Desh Guard Logo" height="50" />
-        </a>
-        <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div class="offcanvas-body" style="font-size: 14px;">
+<!-- Offcanvas Drawer -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileDrawer" aria-labelledby="mobileDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white" id="mobileDrawerLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" style="font-size: 14px;">
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
           <li><a href="about.html" class="text-white text-decoration-none">ABOUT</a></li>
@@ -115,12 +106,11 @@
           </li>
         </ul>
       </div>
-    </div>
-  </aside>
+</div>
 </header>
 <main>
 
-  <section id="location" class="content-section py-5" style=" background: rgba(0, 0, 0, 0.6);" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
+  <section id="location" class="content-section py-5 mt-5" style=" background: rgba(0, 0, 0, 0.6);" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
   <div class="container position-relative" style="max-width: 1140px;">
     
     <!-- Google Map iframe -->
@@ -197,7 +187,7 @@
             <i class="fas fa-phone-alt fa-2x text-success" style="min-width: 40px;"></i>
             <div>
               <h5 class="mb-2" style="font-weight: 700; font-size: 1.2rem;">Hotline (Alternate)</h5>
-              <a href="tel:+8801810688251" class="text-light text-decoration-none" style="font-size: 1.25rem; letter-spacing: 0.5px;">+8801810-688251</a>
+              <a href="tel:+8801810688245" class="text-light text-decoration-none" style="font-size: 1.25rem; letter-spacing: 0.5px;">+8801810688245</a>
             </div>
           </div>
         </div>
@@ -206,7 +196,7 @@
             <i class="fas fa-phone-alt fa-2x text-success" style="min-width: 40px;"></i>
             <div>
               <h5 class="mb-2" style="font-weight: 700; font-size: 1.2rem;">Hotline Alternate)</h5>
-              <a href="tel:+8801911767220" class="text-light text-decoration-none" style="font-size: 1.25rem; letter-spacing: 0.5px;">+8801911-767220</a>
+              <a href="tel:+8801810688246" class="text-light text-decoration-none" style="font-size: 1.25rem; letter-spacing: 0.5px;">+8801810688246</a>
             </div>
           </div>
         </div>
@@ -236,7 +226,7 @@
           <!-- Social Links -->
           <div class="d-flex gap-3 flex-wrap">
             <a href="https://facebook.com/deshgaurdservicepvtltd" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/8801611490705" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+8801810-688246" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
           </div>
@@ -259,11 +249,11 @@
           <div class="row g-2 mt-4">
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>Hotline</strong><br><span class="ms-4">+8801810-688251</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688251</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688245</span></p>
             </div>
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>TNT</strong><br><span class="ms-4">02-55048492</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801911-767220</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801810688246</span></p>
             </div>
           </div>
         </div>
@@ -275,38 +265,44 @@
       <span class="text-muted fs-6"><strong class="text-white">&copy; 2025 Desh Guard Services All rights reserved.</strong></span>
     </div>
   </footer>
-  <!-- Bootstrap JS Bundle -->
-  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS Bundle -->
-  <script src="./aos/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+ <!-- Bootstrap JS Bundle -->
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS for active menu -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
-      const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+<!-- AOS JS Bundle -->
+<script src="./aos/dist/aos.js"></script>
 
-      drawerLinks.forEach(link => {
-        // Extract pathname from link.href
-        const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    disable: function () {
+      return window.innerWidth < 768;
+    }
+  });
+</script>
 
-        if (linkPath === currentPath) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
+<script>
+  
+  // Active menu link in drawer
+  document.addEventListener('DOMContentLoaded', () => {
+    const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
+    const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
 
-        // Optional: add click handler for immediate active class toggle before page reload
-        link.addEventListener('click', () => {
-          drawerLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        });
+    drawerLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+
+      link.addEventListener('click', () => {
+        drawerLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
       });
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
