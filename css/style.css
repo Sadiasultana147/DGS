@@ -508,16 +508,25 @@ body {
     padding-bottom: 40px;
   }
 }
-@media (max-width: 370px) {
+@media (max-width: 362px) {
   .carousel-bg {
-    height: 30vh;          /* even smaller height on very small screens */
+    height: 30vh;
     min-height: 200px;
   }
+ 
+  .carousel-bg .container {
+    padding-top: 80px; 
+    padding-bottom: 30px;
+  }
+
+  .hero-text {
+    font-size: 0.8rem !important;
+  }
 }
+
 /* ===========================================
   End: Hero Section Styles
 =========================================== */
-
 
 /* ======================================
    7. End: (About, Content) Section Styles
