@@ -20,19 +20,17 @@
 <body>
  <!-- ==================== HEADER ==================== -->
 <header class="sticky-top">
-   <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-transparent">
     <div class="container d-flex align-items-center justify-content-between">
       
-      <!-- Logo -->
+      <!-- Logo (Always Visible) -->
       <a href="https://deshguard.com/" class="d-flex align-items-center text-decoration-none" data-aos="fade-right" data-aos-delay="100">
-        <img src="./images/logo.png" alt="Desh Guard Logo" height="75" />
+        <img src="./images/logo.png" alt="Desh Guard Logo" height="60" />
       </a>
 
-      <!-- Main Menu (Desktop Only) -->
+      <!-- Desktop Menu -->
       <ul class="menu-center list-unstyled d-flex gap-4 mb-0 align-items-center d-none d-lg-flex" data-aos="fade-down" data-aos-delay="150">
         <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
-
-        <!-- WHO WE ARE Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHO WE ARE <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -42,8 +40,6 @@
             <li><a href="history.html">Our History</a></li>
           </ul>
         </li>
-
-        <!-- WHAT WE DO Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHAT WE DO <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -53,52 +49,41 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </li>
-
         <li><a href="clients.html" class="text-white text-decoration-none">OUR CLIENTS</a></li>
         <li><a href="whyChoose.html" class="text-white text-decoration-none">WHY CHOOSE</a></li>
       </ul>
 
-      <!-- Contact & Toggle -->
-<div class="d-flex align-items-center gap-2">
+      <!-- Right Area: Phone + Contact + Toggle -->
+      <div class="d-flex align-items-center gap-2" data-aos="fade-left" data-aos-delay="200">
+        <!-- Phone (Always Visible) -->
+        <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold phone-box text-white">
+          <i class="fas fa-mobile-alt me-2"></i><em>+8801810-688246</em>
+        </div>
 
-  <!-- Phone (Desktop only animation) -->
-  <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold phone-box text-white"
-       data-aos="fade-left" data-aos-delay="200">
-    <i class="fas fa-mobile-alt me-2"></i><em>+8801810-688246</em>
-  </div>
+        <!-- Contact Button (Only Desktop) -->
+        <div class="d-none d-lg-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn" style="background-color: #28a745; color: #fff; border-color: #28a745;">
+          <a href="contact.html" class="fw-bold text-white text-decoration-none" style="font-size: 1.2rem; font-style: italic;">
+            Get in Touch With Us
+          </a>
+        </div>
 
-  <!-- Contact Button (Desktop Only + animated) -->
-  <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn d-none d-lg-flex"
-       data-aos="fade-left" data-aos-delay="300"
-       style="background-color: #28a745; color: #fff; border-color: #28a745;">
-    <a href="contact.html" class="fw-bold text-white text-decoration-none" style="font-size: 1.2rem; font-style: italic;">
-      Get in Touch With Us
-    </a>
-  </div>
+        <!-- Drawer Toggle (Only Mobile) -->
+        <button class="navbar-toggler border-0 shadow-none d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileDrawer" aria-controls="mobileDrawer">
+  <span class="custom-toggler-icon"><span></span></span>
+</button>
 
-  <!-- Mobile Menu Toggle (NO AOS!) -->
-  <button class="drawer-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-
-</div>
-
+      </div>
     </div>
   </nav>
+</header>
 
-  <!-- ========== Mobile Offcanvas Menu ========== -->
-  <aside>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header justify-content-between align-items-center">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-          <img src="./images/logo.png" alt="Desh Guard Logo" height="50" />
-        </a>
-        <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div class="offcanvas-body" style="font-size: 14px;">
+<!-- Offcanvas Drawer -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileDrawer" aria-labelledby="mobileDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white" id="mobileDrawerLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" style="font-size: 14px;">
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
           <li><a href="about.html" class="text-white text-decoration-none">ABOUT</a></li>
@@ -118,103 +103,99 @@
           </li>
         </ul>
       </div>
-    </div>
-  </aside>
-</header>
+</div>
 <main>
-<section class="hero-section position-relative text-white pt-5">
-  <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+<section class="hero-section">
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
 
   <!-- Background Slides -->
-  <div class="hero-slide-container position-absolute top-0 start-0 w-100 h-100">
+  <div class="hero-slide-container">
     <div class="hero-slide active" style="background-image: url('./images/slide-bg-1.jpg');"></div>
     <div class="hero-slide" style="background-image: url('./images/slide-bg-2.jpg');"></div>
     <div class="hero-slide" style="background-image: url('./images/slide-bg-3.jpg');"></div>
   </div>
 
-  <!-- Slide 1 -->
-  <div class="container position-relative z-2 py-5 h-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between hero-slide-content slide-1">
-    <div class="hero-left text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
-      <h2 class="fw-bold mb-3 hero-text">Desh Guard Services</h2>
-      <h1 class="display-5 fw-bold mb-4 hero-text">Reliable Security, Trusted Guards</h1>
-      <p class="lead mb-4 hero-text">We provide trained security personnel for residential, commercial, and industrial needs.</p>
-      <a href="services.html" class="btn btn-success fw-bold px-4 py-2 hero-text">Explore Services</a>
+  <!-- Slide Content 1 -->
+  <div class="container hero-slide-content slide-1">
+    <div class="hero-left" data-aos="fade-right">
+      <h2>Desh Guard Services</h2>
+      <h1>Reliable Security, Trusted Guards</h1>
+      <p class="lead">We provide trained security personnel for residential, commercial, and industrial needs.</p>
+      <a href="services.html" class="btn btn-success">Explore Services</a>
     </div>
-    <div class="hero-right position-relative text-center" data-aos="fade-left" style="max-width: 100%; width: 100%; max-width: 400px;">
-      <div class="rounded-4 overflow-hidden shadow mx-auto" style="border-radius: 60px 0 60px 0;">
-        <img src="./images/logo.png" class="img-fluid w-100" alt="Security Guard">
+    <div class="hero-right" data-aos="fade-left">
+      <div class="rounded-4 shadow mx-auto">
+        <img src="./images/logo.png" alt="Security Guard" />
       </div>
-      <div class="position-absolute bg-white text-dark p-3 rounded shadow" style="width: 90%; max-width: 260px; right: 0; top: 20px; z-index: 2;">
-        <p class="fw-bold text-black mb-1">HOTLINE: 1810-688246</p>
-        <p class="fw-semibold mb-1"><em>Welcome to Desh Guard Services!</em></p>
-        <p class="small mb-2">We’re here to safeguard your property with trained professionals. Please share your contact info and requirements.</p>
-        <p class="small mb-0">Our dedicated support team is ready 24/7.</p>
+      <div class="info-box">
+        <p><strong>HOTLINE: 1810-688246</strong></p>
+        <p><em>Welcome to Desh Guard Services!</em></p>
+        <p>We’re here to safeguard your property with trained professionals. Please share your contact info and requirements.</p>
+        <p>Our dedicated support team is ready 24/7.</p>
       </div>
     </div>
   </div>
 
-  <!-- Slide 2 -->
-  <div class="container position-relative z-2 py-5 h-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between hero-slide-content slide-2 d-none">
-    <div class="hero-left text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
-      <h2 class="fw-bold mb-3 hero-text">Client Satisfaction</h2>
-      <h1 class="display-5 fw-bold mb-4 hero-text">They Trust Our Service</h1>
-      <p class="lead mb-4 hero-text">We’ve built a strong reputation with our top-tier security personnel across Bangladesh.</p>
-      <a href="services.html" class="btn btn-success fw-bold px-4 py-2 hero-text">Explore Services</a>
-    </div>
-   <div class="hero-right d-flex flex-column align-items-center gap-3 mt-4 mt-md-0" data-aos="fade-left">
-
-	  <!-- Top Image -->
-	  <div class="shadow-lg" style="transform: rotate(5deg); z-index: 1;">
-		<img src="./images/album-1.jpg"
-			 class="img-fluid rounded-4 border border-white"
-			 alt="Client 2"
-			 style="width: 35vw; max-width: 250px; object-fit: cover;">
-	  </div>
-
-	  <!-- Bottom Two Images -->
-	  <div class="d-flex flex-row justify-content-center gap-3 flex-wrap">
-		<div class="shadow-lg" style="transform: rotate(-5deg); z-index: 2;">
-		  <img src="./images/album-2.jpg"
-			   class="img-fluid rounded-4 border border-white"
-			   alt="Client 1"
-			   style="width: 35vw; max-width: 250px; object-fit: cover;">
-		</div>
-		<div class="shadow-lg" style="transform: rotate(-5deg); z-index: 1;">
-		  <img src="./images/album-3.jpg"
-			   class="img-fluid rounded-4 border border-white"
-			   alt="Client 3"
-			   style="width: 35vw; max-width: 250px; object-fit: cover;">
-		</div>
-	  </div>
-	</div>
- </div>
-
-  <!-- Slide 3 -->
-  <div class="container position-relative z-2 py-5 h-100 d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between hero-slide-content slide-3 d-none">
-    <div class="hero-left text-center text-lg-start mb-4 mb-lg-0" data-aos="fade-right">
-      <h2 class="fw-bold mb-3 hero-text">Advanced Monitoring</h2>
-      <h1 class="display-5 fw-bold mb-4 hero-text">Smart & Reliable Surveillance</h1>
-      <p class="lead mb-4 hero-text">Using modern technology and human intelligence, we secure your premises effectively.</p>
-      <a href="#services" class="btn btn-success fw-bold px-4 py-2 hero-text">Explore Services</a>
-    </div>
-    <!-- Right Image -->
-	<div class="hero-right mt-4 mt-md-0" data-aos="fade-left">
-	  <div class="position-relative mx-auto" style="max-width: 420px; width: 100%; height: auto;">
-		<!-- Curved Border Container -->
-		<div class="w-75 h-75 shadow-lg" style="border-radius: 60px 0 60px 0; overflow: hidden; border: 4px solid #28a745;">
-		  <img src="./images/accesskey.png" alt="Security Access" class="img-fluid w-100" style="object-fit: cover;">
-		</div>
-		<!-- Tag or Label -->
-		<div class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 fw-bold" style="border-bottom-right-radius: 15px;">
-		  Access Control
-		</div>
-	  </div>
-	</div>
+  <!-- Slide Content 2 -->
+<div class="container hero-slide-content slide-2 d-none">
+  <div class="hero-left" data-aos="fade-right">
+    <h2>Client Satisfaction</h2>
+    <h1>They Trust Our Service</h1>
+    <p class="lead">We’ve built a strong reputation with our top-tier security personnel across Bangladesh.</p>
+    <a href="services.html" class="btn btn-success">Explore Services</a>
   </div>
+  <div class="hero-right d-flex flex-column align-items-center gap-3 mt-4 mt-md-0" data-aos="fade-left">
+
+    <!-- Top Image -->
+    <div class="shadow-lg" style="transform: rotate(5deg); z-index: 1;">
+      <img src="./images/album-1.jpg"
+           class="img-fluid rounded-4 border border-white"
+           alt="Client 2"
+           style="width: 35vw; max-width: 250px; object-fit: cover;">
+    </div>
+<!-- Bottom Two Images -->
+<div class="d-flex flex-row justify-content-center gap-3 flex-nowrap">
+  <div class="shadow-lg" style="transform: rotate(-5deg); z-index: 2;">
+    <img src="./images/album-2.jpg"
+         class="img-fluid rounded-4 border border-white"
+         alt="Client 1"
+         style="width: 35vw; max-width: 250px; object-fit: cover;">
+  </div>
+  <div class="shadow-lg" style="transform: rotate(-5deg); z-index: 1;">
+    <img src="./images/album-3.jpg"
+         class="img-fluid rounded-4 border border-white"
+         alt="Client 3"
+         style="width: 35vw; max-width: 250px; object-fit: cover;">
+  </div>
+</div>
+
+  </div>
+</div>
+
+
+  <!-- Slide Content 3 -->
+  <div class="container hero-slide-content slide-3 d-none">
+    <div class="hero-left" data-aos="fade-right">
+      <h2>Advanced Monitoring</h2>
+      <h1>Smart & Reliable Surveillance</h1>
+      <p class="lead">Using modern technology and human intelligence, we secure your premises effectively.</p>
+      <a href="#services" class="btn btn-success">Explore Services</a>
+    </div>
+    <div class="hero-right mt-4 mt-md-0" data-aos="fade-left">
+      <div class="position-relative mx-auto" style="max-width: 420px; width: 100%; height: auto;">
+        <div class="w-75 h-75 shadow-lg rounded-4 overflow-hidden border border-4 border-success mx-auto" style="border-radius: 60px 0 60px 0 !important;">
+          <img src="./images/accesskey.png" alt="Security Access" class="img-fluid w-100" style="object-fit: cover;" />
+        </div>
+        <div class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 fw-bold" style="border-bottom-right-radius: 15px;">
+          Access Control
+        </div>
+      </div>
+    </div>
+  </div>
+
 </section>
-
-</main>
-
  
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer-modern text-white pt-5 w-100">
@@ -271,26 +252,36 @@
   <!-- AOS JS Bundle -->
   <script src="./aos/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
+     AOS.init({
+  duration: 1000,
+  once: true,
+  disable: function () {
+    return window.innerWidth < 768;
+  }
+});
   </script>
 
   <script>
-   const bgSlides = document.querySelectorAll('.hero-slide');
-    const contentSlides = document.querySelectorAll('.hero-slide-content');
-    let currentSlide = 0;
+    // Slide rotation JS
+  const bgSlides = document.querySelectorAll('.hero-slide');
+  const contentSlides = document.querySelectorAll('.hero-slide-content');
+  let currentSlide = 0;
 
-    function showSlide(index) {
-      bgSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
-      contentSlides.forEach((content, i) => content.classList.toggle('d-none', i !== index));
-    }
+  function showSlide(index) {
+    bgSlides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    contentSlides.forEach((content, i) => content.classList.toggle('d-none', i !== index));
+  }
 
-    function rotateSlides() {
-      currentSlide = (currentSlide + 1) % bgSlides.length;
-      showSlide(currentSlide);
-    }
-
+  function rotateSlides() {
+    currentSlide = (currentSlide + 1) % bgSlides.length;
     showSlide(currentSlide);
-    setInterval(rotateSlides, 6000);
+  }
+
+  // Initial display
+  showSlide(currentSlide);
+
+  // Auto rotate every 6 seconds
+  setInterval(rotateSlides, 6000);
   <!-- Custom JS for navbar bg change -->
   window.addEventListener("scroll", function () {
       const navbar = document.querySelector(".navbar");
