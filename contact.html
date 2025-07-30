@@ -22,8 +22,8 @@
 
 <body>
    <!-- ==================== HEADER ==================== -->
-<header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
     <div class="container d-flex align-items-center justify-content-between">
       
       <!-- Logo (Always Visible) -->
@@ -117,7 +117,7 @@
 <main>
 
   <section id="location" class="content-section py-5" style=" background: rgba(0, 0, 0, 0.6);" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
-  <div class="container position-relative" style="max-width: 1140px;">
+  <div class="container position-relative mt-5" style="max-width: 1140px;">
     
     <!-- Google Map iframe -->
     <iframe
@@ -292,19 +292,6 @@
 </script>
 
 <script>
-  
-  // Navbar background change on scroll
-  window.addEventListener("scroll", function () {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 0) {
-      navbar.classList.remove("navbar-transparent");
-      navbar.classList.add("navbar-solid");
-    } else {
-      navbar.classList.add("navbar-transparent");
-      navbar.classList.remove("navbar-solid");
-    }
-  });
-
   // Active menu link in drawer
   document.addEventListener('DOMContentLoaded', () => {
     const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');

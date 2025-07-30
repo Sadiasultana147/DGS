@@ -20,9 +20,9 @@
 </a>
 
 <body>
-    <!-- ==================== HEADER ==================== -->
-<header class="sticky-top">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
+      <!-- ==================== HEADER ==================== -->
+<header>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-black" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
     <div class="container d-flex align-items-center justify-content-between">
       
       <!-- Logo (Always Visible) -->
@@ -114,91 +114,103 @@
 </div>
 </header>
 <main>
-    <section class="about-section text-white py-5 position-relative overflow-hidden" style="background: url('./images/vission-mission.png') no-repeat center center / cover; padding-top: 80px; min-height: 70vh;">
-      <!-- Overlay -->
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50" style="z-index: 0;"></div>
-      <!-- Main Content -->
-      <div class="container">
-        <!-- Vision Row -->
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6" data-aos="fade-right">
-            <div class="curved-wrapper">
-			  <img src="./images/vision.png" class="all-imagecurvepath" alt="Vision Image" />
-			  <svg class="curve-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
-				<path d="
-				  M 5,0
-				  Q 50,10 95,0
-				  L 100,5
-				  Q 90,50 100,95
-				  L 95,100
-				  Q 50,90 5,100
-				  L 0,95
-				  Q 10,50 0,5
-				  Z
-				" fill="none" stroke="white" stroke-width="1" vector-effect="non-scaling-stroke"/>
-			  </svg>
-			</div>
-          </div>
-          <div class="col-md-6" data-aos="fade-left">
-            <h3 class="fw-bold text-info mb-3">Vision</h3>
-            <p class="fw-semibold">
-			  Our vision is to emerge as the most trusted, innovative, and forward-thinking security service provider in Bangladesh—recognized for excellence in operations, ethics, and client satisfaction. We aspire to set new benchmarks in the private security industry by delivering world-class services aligned with national safety objectives and international standards. </p>
-            <p class="fw-semibold">We aim to be the security partner of choice for government agencies, corporate institutions, industrial complexes, financial organizations, residential communities, and event organizers—anyone who values integrity, dependability, and vigilance.</p>
-            <p class="fw-semibold text-white">Our future-forward vision includes investing in cutting-edge surveillance technologies, intelligence-based risk mitigation, and AI-driven monitoring systems to proactively address evolving security challenges. Through continuous innovation, workforce empowerment, and commitment to service excellence, we envision building a safer, more resilient Bangladesh.</p>
-          </div>
-        </div>
+  <section class="text-white py-5 mt-5 position-relative overflow-hidden" style="background: url('./images/vission-mission.png') no-repeat center center / cover; padding-top: 80px; min-height: 70vh;">
+  <!-- Overlay -->
+  <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50" style="z-index: 0;"></div>
 
-        <!-- Mission Row -->
-        <div class="row align-items-center mb-5">
-          <div class="col-md-6 order-md-2" data-aos="fade-left">
-            			  <img src="./images/mission.png" class="all-imagecurvepath" alt="Vision Image" />
-			  <svg class="curve-overlay" viewBox="0 0 100 100" preserveAspectRatio="none">
-				<path d="
-				  M 5,0
-				  Q 50,10 95,0
-				  L 100,5
-				  Q 90,50 100,95
-				  L 95,100
-				  Q 50,90 5,100
-				  L 0,95
-				  Q 10,50 0,5
-				  Z
-				" fill="none" stroke="white" stroke-width="1" vector-effect="non-scaling-stroke"/>
-			  </svg>
-			</div>
-          <div class="col-md-6 order-md-1" data-aos="fade-right">
-            <h3 class="fw-bold text-info mb-3">Mission</h3>
-            <p class="fw-semibold">Our mission is to provide superior, customized, and professional security solutions that create a tangible impact on the safety, confidence, and productivity of the people and organizations we serve.</p>
-            <p class="fw-semibold">We believe that security is not just about protection—it's about building trust, ensuring operational continuity, and enabling individuals and businesses to thrive without fear or disruption. Each assignment we take on is carried out with a deep sense of duty, discipline, and accountability.</p>
-            <p class="fw-semibold">With a highly trained and motivated workforce, rigorous internal audits, and the latest surveillance tools, our goal is to address each client’s unique requirements with precision and care. We take pride in being proactive, not reactive—anticipating threats, planning preventive measures, and acting decisively in times of crisis.</p>
-            <div class="p-4 rounded-4 shadow-sm mission-card" >
-              <ul class="list-unstyled mb-0 text-white">
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To make business and residential communities safer and more secure places to work, live and play.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To increase community awareness of real security issues.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To inform and educate our customers on the security solutions available, so that they can make the best choices to meet their needs and provide them complete peace of mind.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <!-- Main Content -->
+  <div class="container position-relative" style="z-index: 1;">
+    <!-- Vision Row -->
+    <div class="row align-items-center mb-5">
+      <!-- Vision Image -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="curved-wrapper mx-auto w-100" style="max-width: 600px; aspect-ratio: 6 / 5; position: relative;">
+          <img src="./images/vision.png" class="all-imagecurvepath w-100 h-100" alt="Vision" style="object-fit: cover; border-radius: 1rem;" />
+          <div class="glass-black-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.3); pointer-events: none;"></div>
 
-        <!-- Core Values Card -->
-        <div class="row mb-5 mx-0" data-aos="fade-up">
-          <div class="col-12 px-0">
-            <div class="p-4 rounded-4 shadow-sm core-values-card" >
-              <h5 class="text-info fw-bold mb-4">The core values we uphold define who we are as a company and shape every aspect of our work. They represent the principles and standards we consistently strive to maintain to deliver excellence and build trust with our customers and community.</h5>
-              <ul class="list-unstyled mb-0 text-white">
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Value</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Service and quality excellence.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Integrity and professionalism.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Continual improvement and innovation.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Professional development.</li>
-                <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Social responsibility.</li>
-              </ul>
-            </div>
-          </div>
+          <!-- Animated SVG Border -->
+          <svg class="curve-overlay position-absolute top-0 start-0 w-100 h-100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="11.4%" stop-color="#202639">
+                  <animate attributeName="offset" values="0%;1;0%" dur="4s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="70.2%" stop-color="#3F4C77">
+                  <animate attributeName="offset" values="0.5;1;0.5" dur="4s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stop-color="#6bc5ff">
+                  <animate attributeName="offset" values="1;0;1" dur="4s" repeatCount="indefinite" />
+                </stop>
+              </linearGradient>
+            </defs>
+            <path d="M 5,0 Q 50,10 95,0 L 100,5 Q 90,50 100,95 L 95,100 Q 50,90 5,100 L 0,95 Q 10,50 0,5 Z"
+              fill="none" stroke="white" stroke-width="2" vector-effect="non-scaling-stroke" />
+          </svg>
         </div>
       </div>
-    </section>
+
+      <!-- Vision Text -->
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 class="fw-bold text-info mb-3">Vision</h3>
+        <p class="fw-semibold">Our vision is to emerge as the most trusted, innovative, and forward-thinking security service provider in Bangladesh—recognized for excellence in operations, ethics, and client satisfaction. We aspire to set new benchmarks in the private security industry by delivering world-class services aligned with national safety objectives and international standards.</p>
+        <p class="fw-semibold">We aim to be the security partner of choice for government agencies, corporate institutions, industrial complexes, financial organizations, residential communities, and event organizers—anyone who values integrity, dependability, and vigilance.</p>
+        <p class="fw-semibold text-white">Our future-forward vision includes investing in cutting-edge surveillance technologies, intelligence-based risk mitigation, and AI-driven monitoring systems to proactively address evolving security challenges. Through continuous innovation, workforce empowerment, and commitment to service excellence, we envision building a safer, more resilient Bangladesh.</p>
+      </div>
+    </div>
+
+    <!-- Mission Row -->
+    <div class="row align-items-center mb-5">
+      <!-- Mission Image -->
+      <div class="col-md-6 order-md-2" data-aos="fade-left">
+        <div class="curved-wrapper mx-auto w-100" style="max-width: 600px; aspect-ratio: 6 / 5; position: relative;">
+          <img src="./images/mission.png" class="all-imagecurvepath w-100 h-100" alt="Mission" style="object-fit: cover; border-radius: 1rem;" />
+          <div class="glass-black-overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.3); pointer-events: none;"></div>
+
+          <!-- Reuse the same animated SVG -->
+          <svg class="curve-overlay position-absolute top-0 start-0 w-100 h-100" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <path d="M 5,0 Q 50,10 95,0 L 100,5 Q 90,50 100,95 L 95,100 Q 50,90 5,100 L 0,95 Q 10,50 0,5 Z"
+              fill="none" stroke="white" stroke-width="2" vector-effect="non-scaling-stroke" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Mission Text -->
+      <div class="col-md-6 order-md-1" data-aos="fade-right">
+        <h3 class="fw-bold text-info mb-3">Mission</h3>
+        <p class="fw-semibold">Our mission is to provide superior, customized, and professional security solutions that create a tangible impact on the safety, confidence, and productivity of the people and organizations we serve.</p>
+        <p class="fw-semibold">We believe that security is not just about protection—it's about building trust, ensuring operational continuity, and enabling individuals and businesses to thrive without fear or disruption. Each assignment we take on is carried out with a deep sense of duty, discipline, and accountability.</p>
+        <p class="fw-semibold">With a highly trained and motivated workforce, rigorous internal audits, and the latest surveillance tools, our goal is to address each client’s unique requirements with precision and care. We take pride in being proactive, not reactive—anticipating threats, planning preventive measures, and acting decisively in times of crisis.</p>
+
+        <!-- Mission Bullet List -->
+        <div class="p-4 rounded-4 shadow-sm mission-card">
+          <ul class="list-unstyled mb-0 text-white">
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To make business and residential communities safer and more secure places to work, live and play.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To increase community awareness of real security issues.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>To inform and educate our customers on the security solutions available, so that they can make the best choices to meet their needs and provide them complete peace of mind.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="row mb-5 mx-0" data-aos="fade-up">
+      <div class="col-12 px-0">
+        <div class="p-4 rounded-4 shadow-sm core-values-card">
+          <h5 class="text-info fw-bold mb-4">The core values we uphold define who we are as a company and shape every aspect of our work. They represent the principles and standards we consistently strive to maintain to deliver excellence and build trust with our customers and community.</h5>
+          <ul class="list-unstyled mb-0 text-white">
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Value</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Service and quality excellence.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Integrity and professionalism.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Continual improvement and innovation.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Professional development.</li>
+            <li class="border-bottom border-secondary-subtle py-2"><span class="me-2">&#8226;</span>Social responsibility.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
   </main>
   <!-- ==================== FOOTER ==================== -->
   <footer class="footer-modern text-white pt-5 w-100">
