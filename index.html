@@ -80,13 +80,14 @@
   <div class="offcanvas-header">
     <h5 class="offcanvas-title text-white" id="mobileDrawerLabel">Menu</h5>
     <button type="button" style="background-color: #28a745;  filter: brightness(1.2) saturate(2);
-  width: 2rem;
-  height: 2rem;
-  background-color: #28a745;
-  border-radius: 50%;
-  padding: 0.5rem;
-  opacity: 1;
-  border: none;" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		  width: 2rem;
+		  height: 2rem;
+		  background-color: #28a745;
+		  border-radius: 50%;
+		  padding: 0.5rem;
+		  opacity: 1;
+		  border: none;" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+  </button>
   </div>
   <div class="offcanvas-body" style="font-size: 14px;">
         <ul class="list-unstyled">
@@ -349,7 +350,7 @@
             <a href="https://facebook.com/deshgaurdservicepvtltd" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook-f"></i></a>
             <a href="https://wa.me/+8801810-688246" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@user-ri2nf1tz6l" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <!-- Footer Column: Quick Links -->
@@ -419,7 +420,7 @@
   // Active menu link in drawer
   document.addEventListener('DOMContentLoaded', () => {
     const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
-    const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+    const currentPath = window.location.pathname.replace(/\/$/, ""); 
 
     drawerLinks.forEach(link => {
       const linkPath = new URL(link.href).pathname.replace(/\/$/, "");

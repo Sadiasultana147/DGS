@@ -82,7 +82,15 @@
 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileDrawer" aria-labelledby="mobileDrawerLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title text-white" id="mobileDrawerLabel">Menu</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <button type="button" style="background-color: #28a745;  filter: brightness(1.2) saturate(2);
+		  width: 2rem;
+		  height: 2rem;
+		  background-color: #28a745;
+		  border-radius: 50%;
+		  padding: 0.5rem;
+		  opacity: 1;
+		  border: none;" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+  </button>
   </div>
   <div class="offcanvas-body" style="font-size: 14px;">
         <ul class="list-unstyled">
@@ -217,7 +225,7 @@
 </section>
 
 </main>
-  <!-- ==================== FOOTER ==================== -->
+   <!-- ==================== FOOTER ==================== -->
   <footer class="footer-modern text-white pt-5 w-100">
     <div class="container-fluid">
       <div class="row gy-4">
@@ -228,9 +236,9 @@
           <!-- Social Links -->
           <div class="d-flex gap-3 flex-wrap">
             <a href="https://facebook.com/deshgaurdservicepvtltd" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/8801611490705" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+8801810-688246" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@user-ri2nf1tz6l" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <!-- Footer Column: Quick Links -->
@@ -251,11 +259,11 @@
           <div class="row g-2 mt-4">
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>Hotline</strong><br><span class="ms-4">+8801810-688251</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688251</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688245</span></p>
             </div>
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>TNT</strong><br><span class="ms-4">02-55048492</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801911-767220</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801810688246</span></p>
             </div>
           </div>
         </div>
@@ -268,37 +276,55 @@
     </div>
   </footer>
   <!-- Bootstrap JS Bundle -->
-  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS Bundle -->
-  <script src="./aos/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS for active menu -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
-      const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+<!-- AOS JS Bundle -->
+<script src="./aos/dist/aos.js"></script>
 
-      drawerLinks.forEach(link => {
-        // Extract pathname from link.href
-        const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    disable: function () {
+      return window.innerWidth < 768;
+    }
+  });
+</script>
 
-        if (linkPath === currentPath) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
+<script>
+  
+  // Navbar background change on scroll
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 0) {
+      navbar.classList.remove("navbar-transparent");
+      navbar.classList.add("navbar-solid");
+    } else {
+      navbar.classList.add("navbar-transparent");
+      navbar.classList.remove("navbar-solid");
+    }
+  });
 
-        // Optional: add click handler for immediate active class toggle before page reload
-        link.addEventListener('click', () => {
-          drawerLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        });
+  // Active menu link in drawer
+  document.addEventListener('DOMContentLoaded', () => {
+    const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
+    const currentPath = window.location.pathname.replace(/\/$/, "");
+
+    drawerLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+
+      link.addEventListener('click', () => {
+        drawerLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
       });
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>

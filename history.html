@@ -20,21 +20,19 @@
 </a>
 
 <body>
-  <!-- ==================== HEADER ==================== -->
-  <header class="sticky-top">
-    <nav class="bg-black text-white py-2 sticky-top" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
-      <div class="container d-flex align-items-center justify-content-between">
+    <!-- ==================== HEADER ==================== -->
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black py-2" style="z-index: 1030;" data-aos="fade-down" data-aos-duration="1000">
+    <div class="container d-flex align-items-center justify-content-between">
       
-      <!-- Logo -->
+      <!-- Logo (Always Visible) -->
       <a href="https://deshguard.com/" class="d-flex align-items-center text-decoration-none" data-aos="fade-right" data-aos-delay="100">
-        <img src="./images/logo.png" alt="Desh Guard Logo" height="75" />
+        <img src="./images/logo.png" alt="Desh Guard Logo" height="60" />
       </a>
 
-      <!-- Main Menu (Desktop Only) -->
+      <!-- Desktop Menu -->
       <ul class="menu-center list-unstyled d-flex gap-4 mb-0 align-items-center d-none d-lg-flex" data-aos="fade-down" data-aos-delay="150">
         <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
-
-        <!-- WHO WE ARE Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHO WE ARE <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -44,8 +42,6 @@
             <li><a href="history.html">Our History</a></li>
           </ul>
         </li>
-
-        <!-- WHAT WE DO Dropdown -->
         <li class="position-relative custom-dropdown">
           <a href="#" class="text-white text-decoration-none custom-toggle">WHAT WE DO <i class="fas fa-chevron-down small ms-1"></i></a>
           <ul class="custom-dropdown-menu">
@@ -55,46 +51,47 @@
             <li><a href="faq.html">FAQ</a></li>
           </ul>
         </li>
-
         <li><a href="clients.html" class="text-white text-decoration-none">OUR CLIENTS</a></li>
         <li><a href="whyChoose.html" class="text-white text-decoration-none">WHY CHOOSE</a></li>
       </ul>
 
-      <!-- Contact & Toggle -->
+      <!-- Right Area: Phone + Contact + Toggle -->
       <div class="d-flex align-items-center gap-2" data-aos="fade-left" data-aos-delay="200">
-
-        <!-- Phone -->
+        <!-- Phone (Always Visible) -->
         <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold phone-box text-white">
           <i class="fas fa-mobile-alt me-2"></i><em>+8801810-688246</em>
         </div>
 
-        <!-- Contact Button (Desktop Only) -->
-        <div class="d-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn d-none d-lg-flex" style="background-color: #28a745; color: #fff; border-color: #28a745;">
+        <!-- Contact Button (Only Desktop) -->
+        <div class="d-none d-lg-flex align-items-center justify-content-center px-2 px-lg-3 py-1 border border-light rounded-pill fw-bold contact-btn" style="background-color: #28a745; color: #fff; border-color: #28a745;">
           <a href="contact.html" class="fw-bold text-white text-decoration-none" style="font-size: 1.2rem; font-style: italic;">
             Get in Touch With Us
           </a>
         </div>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="drawer-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+        <!-- Drawer Toggle (Only Mobile) -->
+        <button class="navbar-toggler border-0 shadow-none d-lg-none p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileDrawer" aria-controls="mobileDrawer">
+		  <span class="custom-toggler-icon"><span></span></span>
+		</button>
+
       </div>
     </div>
   </nav>
-
-  <!-- ========== Mobile Offcanvas Menu ========== -->
-  <aside>
-    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-      <div class="offcanvas-header justify-content-between align-items-center">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
-          <img src="./images/logo.png" alt="Desh Guard Logo" height="50" />
-        </a>
-        <button type="button" class="btn-close custom-close-btn" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-
-      <!-- Mobile Navigation -->
-      <div class="offcanvas-body" style="font-size: 14px;">
+<!-- Offcanvas Drawer -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mobileDrawer" aria-labelledby="mobileDrawerLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-white" id="mobileDrawerLabel">Menu</h5>
+    <button type="button" style="background-color: #28a745;  filter: brightness(1.2) saturate(2);
+		  width: 2rem;
+		  height: 2rem;
+		  background-color: #28a745;
+		  border-radius: 50%;
+		  padding: 0.5rem;
+		  opacity: 1;
+		  border: none;" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+  </button>
+  </div>
+  <div class="offcanvas-body" style="font-size: 14px;">
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-white text-decoration-none">HOME</a></li>
           <li><a href="about.html" class="text-white text-decoration-none">ABOUT</a></li>
@@ -114,50 +111,50 @@
           </li>
         </ul>
       </div>
-    </div>
-  </aside>
+</div>
 </header>
 <main>
 <section class="py-5" style="background: linear-gradient(135deg, #1e293b, #334155); color: #fff;">
-  <div class="container text-white">
-<!-- History Content -->
-<div class="text-center mb-5" data-aos="fade-up">
-        <h1 class="display-5 fw-bold">Our History</h1>
-        <p class="lead text-light">Desh Guard Services – A Legacy of Trust, Discipline & Service Since 2013</p>
-      </div>
-<div class="mb-5" style="max-width: 900px; text-align: justify;" data-aos="fade-up" data-aos-delay="100">
-  <h3 class="fw-bold text-info mb-3 text-start">Company History & Background</h3>
+  <div class="container">
+    <!-- History Content -->
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h1 class="display-5 fw-bold">Our History</h1>
+      <p class="lead text-light">Desh Guard Services – A Legacy of Trust, Discipline & Service Since 2013</p>
+    </div>
 
-  <p class="fs-5 fw-semibold text-white">
-    <strong>Desh Guard Services (Pvt.) Ltd.</strong> was founded in 2013, originally operating as a locksmith company. Through strategic growth, visionary leadership, and a commitment to excellence, it has evolved into one of the most trusted and professional security service providers in Bangladesh.
-  </p>
+    <div class="mx-auto" style="max-width: 900px; text-align: justify;" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="fw-bold text-info mb-3 text-start">Company History & Background</h3>
 
-  <p class="text-light">
-    With over a decade of operational experience, we have built a robust infrastructure and a reputation for reliability. Our services span a wide range of sectors including commercial, industrial, residential, and government facilities. We pride ourselves on our ability to adapt to dynamic client requirements while ensuring the highest level of security and professionalism.
-  </p>
+      <p class="fs-6 fw-semibold text-white" style="word-break: break-word; white-space: normal; line-height: 1.7;">
+        <strong>Desh Guard Services (Pvt.) Ltd.</strong> was founded in 2013, originally operating as a locksmith company. Through strategic growth, visionary leadership, and a commitment to excellence, it has evolved into one of the most trusted and professional security service providers in Bangladesh.
+      </p>
 
-  <p class="text-light">
-    Our strength lies in our people. Our team comprises highly trained professionals—many of whom are distinguished veterans from the ARMY, BDR, and ANSAR, as well as personnel from academic and technical backgrounds. This unique blend of experience and expertise enables us to deliver comprehensive security solutions tailored to the specific needs of each client.
-  </p>
+      <p class="text-light" style="line-height: 1.7;">
+        With over a decade of operational experience, we have built a robust infrastructure and a reputation for reliability. Our services span a wide range of sectors including commercial, industrial, residential, and government facilities. We pride ourselves on our ability to adapt to dynamic client requirements while ensuring the highest level of security and professionalism.
+      </p>
 
-  <p class="text-light">
-    We remain steadfast in our core values of trust, discipline, and consistent performance. At Desh Guard Services, we empower our clients with a sense of peace and protection by delivering dependable, transparent, and uncompromised security services—24/7, 365 days a year.
-  </p>
+      <p class="text-light" style="line-height: 1.7;">
+        Our strength lies in our people. Our team comprises highly trained professionals—many of whom are distinguished veterans from the ARMY, BDR, and ANSAR, as well as personnel from academic and technical backgrounds. This unique blend of experience and expertise enables us to deliver comprehensive security solutions tailored to the specific needs of each client.
+      </p>
 
-  <!-- New additional rich content -->
-  <p class="text-light mt-4">
-    Over the years, Desh Guard Services has embraced innovation and technology, integrating state-of-the-art surveillance systems and training methodologies to stay ahead in the security landscape. We invest continuously in upgrading our resources and skillsets, ensuring that our clients receive cutting-edge security solutions that meet international standards.
-  </p>
+      <p class="text-light" style="line-height: 1.7;">
+        We remain steadfast in our core values of trust, discipline, and consistent performance. At Desh Guard Services, we empower our clients with a sense of peace and protection by delivering dependable, transparent, and uncompromised security services—24/7, 365 days a year.
+      </p>
 
-  <p class="text-light">
-    Our commitment to corporate social responsibility and community engagement reflects in our ethical business practices and transparent client relationships. We believe in creating a safer Bangladesh, not only through security but also by fostering awareness and collaboration among stakeholders.
-  </p>
+      <!-- New additional rich content -->
+      <p class="text-light mt-4" style="line-height: 1.7;">
+        Over the years, Desh Guard Services has embraced innovation and technology, integrating state-of-the-art surveillance systems and training methodologies to stay ahead in the security landscape. We invest continuously in upgrading our resources and skillsets, ensuring that our clients receive cutting-edge security solutions that meet international standards.
+      </p>
 
-  <p class="text-light">
-    Looking forward, Desh Guard Services envisions expanding its footprint nationally and regionally, strengthening partnerships with both private and public sectors. We remain dedicated to excellence, adaptability, and integrity, forging long-term relationships built on trust and mutual success.
-  </p>
-</div>
+      <p class="text-light" style="line-height: 1.7;">
+        Our commitment to corporate social responsibility and community engagement reflects in our ethical business practices and transparent client relationships. We believe in creating a safer Bangladesh, not only through security but also by fostering awareness and collaboration among stakeholders.
+      </p>
 
+      <p class="text-light" style="line-height: 1.7;">
+        Looking forward, Desh Guard Services envisions expanding its footprint nationally and regionally, strengthening partnerships with both private and public sectors. We remain dedicated to excellence, adaptability, and integrity, forging long-term relationships built on trust and mutual success.
+      </p>
+    </div>
+  </div>
     <!-- Text Message Section -->
     <div class="text-white p-4 rounded-4 shadow-lg" data-aos="fade-up"
       style="background: rgba(18, 18, 18, 0.65); backdrop-filter: blur(18px) saturate(200%);
@@ -195,7 +192,6 @@
 </section>
 
 </main>
-
 <!-- ==================== FOOTER ==================== -->
   <footer class="footer-modern text-white pt-5 w-100">
     <div class="container-fluid">
@@ -207,9 +203,9 @@
           <!-- Social Links -->
           <div class="d-flex gap-3 flex-wrap">
             <a href="https://facebook.com/deshgaurdservicepvtltd" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="200"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://wa.me/8801611490705" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/+8801810-688246" target="_blank" class="social-icon" data-aos="zoom-in" data-aos-delay="300"><i class="fab fa-whatsapp"></i></a>
             <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="400"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.youtube.com/@user-ri2nf1tz6l" class="social-icon" target="_blank" data-aos="zoom-in" data-aos-delay="500"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <!-- Footer Column: Quick Links -->
@@ -230,11 +226,11 @@
           <div class="row g-2 mt-4">
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>Hotline</strong><br><span class="ms-4">+8801810-688251</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688251</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>①</strong><br><span class="ms-4">+8801810-688245</span></p>
             </div>
             <div class="col-6">
               <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>TNT</strong><br><span class="ms-4">02-55048492</span></p>
-              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801911-767220</span></p>
+              <p class="mb-2 text-secondary fw-bold"><i class="fas fa-phone-alt me-2 text-success"></i><strong>②</strong><br><span class="ms-4">+8801810688246</span></p>
             </div>
           </div>
         </div>
@@ -247,37 +243,43 @@
     </div>
   </footer>
   <!-- Bootstrap JS Bundle -->
-  <script src="./bootstrap/bootstrap.bundle.min.js"></script>
-  <!-- AOS JS Bundle -->
-  <script src="./aos/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+<script src="./bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- Custom JS for active menu -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
-      const currentPath = window.location.pathname.replace(/\/$/, ""); // remove trailing slash
+<!-- AOS JS Bundle -->
+<script src="./aos/dist/aos.js"></script>
 
-      drawerLinks.forEach(link => {
-        // Extract pathname from link.href
-        const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true,
+    disable: function () {
+      return window.innerWidth < 768;
+    }
+  });
+</script>
 
-        if (linkPath === currentPath) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
+<script>
+ 
+  // Active menu link in drawer
+  document.addEventListener('DOMContentLoaded', () => {
+    const drawerLinks = document.querySelectorAll('.offcanvas-body ul li a');
+    const currentPath = window.location.pathname.replace(/\/$/, "");
 
-        // Optional: add click handler for immediate active class toggle before page reload
-        link.addEventListener('click', () => {
-          drawerLinks.forEach(l => l.classList.remove('active'));
-          link.classList.add('active');
-        });
+    drawerLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+
+      link.addEventListener('click', () => {
+        drawerLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
       });
     });
-  </script>
+  });
+</script>
 
 </body>
 </html>
